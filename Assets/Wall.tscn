@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 600, 10 )
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 1200, 20, 2 )
+
+[node name="Wall" type="StaticBody2D"]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D"]
+modulate = Color( 0.45098, 0.45098, 0.45098, 1 )
+mesh = SubResource( 2 )
