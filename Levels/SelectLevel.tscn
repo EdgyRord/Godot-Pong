@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Levels/Button.gd" type="Script" id=1]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -7,3 +9,5 @@ margin_left = 289.0
 margin_top = 212.0
 margin_right = 658.0
 margin_bottom = 311.0
+text = "Play Pong"
+script = ExtResource( 1 )
