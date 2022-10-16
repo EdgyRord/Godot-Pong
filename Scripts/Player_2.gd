@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed : int = 150
+var speed : int = 250
 
 var vel : Vector2 = Vector2()
 

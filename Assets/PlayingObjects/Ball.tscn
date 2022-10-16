@@ -17,5 +17,4 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D"]
-modulate = Color( 0.768627, 0.768627, 0.768627, 1 )
 mesh = SubResource( 2 )
