@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blyat.png-d0c4e76f8f45703ef7de8cc38a70b73d.stex"
+path="res://.import/Bumper_sprite.png-42497d09f1b6653da0bb35299d3f9dcb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blyat.png"
-dest_files=[ "res://.import/blyat.png-d0c4e76f8f45703ef7de8cc38a70b73d.stex" ]
+source_file="res://Assets/Abilities/Bumper_sprite.png"
+dest_files=[ "res://.import/Bumper_sprite.png-42497d09f1b6653da0bb35299d3f9dcb.stex" ]
 
 [params]
 

@@ -5,10 +5,10 @@
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="Button" type="Button" parent="."]
-margin_left = 338.0
-margin_top = 251.0
-margin_right = 705.0
-margin_bottom = 349.0
+margin_left = 768.0
+margin_top = 459.0
+margin_right = 1152.0
+margin_bottom = 561.0
 shortcut_in_tooltip = false
 action_mode = 0
 text = "Play Pong"

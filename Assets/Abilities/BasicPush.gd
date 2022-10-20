@@ -1,40 +1,66 @@
 extends KinematicBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var alive_timer = Timer.new()
-var vel = Vector2(0,0)
-var scale_up = 0.01
-var speed = 100
+var is_ready = true
+var is_shooting = false
+var is_returning = false
 
-# Called when the node enters the scene tree for the first time.
+var origin : int
+var current : int
+var destination : int
+
+var bumper_distance = 100
+var bumper_speed = 2000
+var bumper_return_speed = -100
+
+
 func _ready():
-	alive_timer.connect("timeout", self, "queue_free")
-	alive_timer.wait_time = 1
-	alive_timer.one_shot = true
-	add_child(alive_timer)
-	alive_timer.start()
+	
+# 	Removing lifetime for now
+#	alive_timer.connect("timeout", self, "queue_free")
+#	alive_timer.wait_time = 1
+#	alive_timer.one_shot = true
+#	add_child(alive_timer)
+#	alive_timer.start()
+	
 	pass # Replace with function body.
 	
 	
 func _physics_process(delta):
-	var colision_info = move_and_collide(vel*delta)
-	scale += Vector2(scale_up,scale_up)
-	pass
+	if is_shooting:
+		if current < destination:
+			var colision_info = move_and_collide(Vector2(bumper_speed,0)*delta)
+			current = get_transform().get_origin().x
+			#print_debug("shooting..." + str(current) + " " + str(destination))
+		else:
+			position.x = 0 + destination
+			current = destination
+			bumper_wait()
+			
+	elif is_returning:
+		if current > origin:
+			var colision_info = move_and_collide(Vector2(bumper_return_speed,0)*delta)
+			current = get_transform().get_origin().x
+			#print_debug("returning..." + str(current) + " " + str(origin))
+		else:
+			is_returning = false
+			position.x = origin
+			is_ready = true
 
 
-func init(player_number, pos) -> KinematicBody2D:
-	position = pos
-	scale = Vector2(0.3,0.3)
-	match (player_number):
-		1:
-			rotation_degrees = 90
-			position += Vector2(10,0)
-			vel.x = speed
-		2:
-			rotation_degrees = -90
-			position -= Vector2(10,0)
-			vel.x = -speed
-	return self
+#Shoot the bumper forward
+func bumper_shoot(orig):
+	print_debug("Shoot bumper")
+	is_ready = false
+	is_shooting = true
+	origin = orig
+	current = origin
+	destination = origin + bumper_distance
+	print_debug(current)
+	
+func bumper_wait():
+	is_shooting = false
+	bumper_return()
+	
+func bumper_return():
+	is_returning = true

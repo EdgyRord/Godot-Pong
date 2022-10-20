@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/PlayingObjects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/PlayingObjects/Ball.tscn" type="PackedScene" id=2]
@@ -6,36 +6,33 @@
 [ext_resource path="res://Assets/PlayingObjects/Player_2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/LevelScenery/Goal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/GUI/Score.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Abilities/BasicPush.tscn" type="PackedScene" id=7]
 
 [node name="MainNode" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 62, 300 )
+position = Vector2( 96, 540 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1144, 843 )
+position = Vector2( 1144, 540 )
 
 [node name="Wall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 478, 603 )
+position = Vector2( 960, 90 )
 
 [node name="Wall2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 507, -3 )
+position = Vector2( 960, 990 )
 
 [node name="Player_2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 962, 300 )
+position = Vector2( 1824, 540 )
 
 [node name="Goal" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1024, 300 )
+position = Vector2( 1920, 540 )
 
 [node name="Goal2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0, 300 )
+position = Vector2( 0, 540 )
 
 [node name="Score" parent="." instance=ExtResource( 6 )]
-margin_left = 484.0
+margin_left = 930.0
 margin_top = 15.0
-margin_right = 491.0
-margin_bottom = 15.0
-
-[node name="BasicPush" parent="." instance=ExtResource( 7 )]
-position = Vector2( 638, 333 )
+margin_right = 963.0
+margin_bottom = 29.0
+rect_scale = Vector2( 2, 2 )

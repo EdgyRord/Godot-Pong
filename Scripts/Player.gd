@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var speed : int = 250
 var vel : Vector2 = Vector2()
+export var player_number: int = 1
 
 const push_ability = preload("res://Assets/Abilities/BasicPush.tscn")
 
@@ -23,6 +24,6 @@ func _physics_process(delta):
 	
 
 func use_main_ability(pos):
-	var push_gust = push_ability.instance().init(1, pos)
-	get_parent().add_child(push_gust)
-	
+	if $BasicPush_v2.is_ready:
+		$BasicPush_v2.bumper_shoot($BasicPush_v2.get_transform().get_origin().x)
+	pass
