@@ -14,8 +14,8 @@ orbit_velocity_random = 0.0
 
 [node name="BasicPush_v2" type="KinematicBody2D"]
 rotation = 1.5708
-collision_layer = 2
-collision_mask = 5
+collision_layer = 16
+collision_mask = 0
 collision/safe_margin = 10.0
 script = ExtResource( 2 )
 
@@ -26,7 +26,7 @@ process_material = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
 rotation = -1.5708
-polygon = PoolVector2Array( -26, -124, -26, 124, -19, 124, -16, 123, -12, 122, 0, 114, 15, 96, 26, 71, 34, 35, 37, 13, 37, -13, 34, -39, 23, -80, 15, -96, 0, -114, -10, -121, -15, -123, -19, -124 )
+polygon = PoolVector2Array( -26, 124, -26, -124, 12, -100, 32, -50, 36, 0, 32, 50, 12, 100 )
 
 [node name="BumperSprite" type="Sprite" parent="CollisionShape2D"]
 position = Vector2( -4, 0 )

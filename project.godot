@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Pong"
 run/main_scene="res://Levels/SelectLevel.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/Graphics/icon.png"
 
 [autoload]
 
@@ -84,6 +84,7 @@ p1_push_action={
 2d_physics/layer_2="Players"
 2d_physics/layer_3="Ball"
 2d_physics/layer_4="ScoreArea"
+2d_physics/layer_5="Abilities"
 
 [locale]
 

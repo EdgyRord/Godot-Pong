@@ -25,5 +25,5 @@ func _physics_process(delta):
 
 func use_main_ability(pos):
 	if $BasicPush_v2.is_ready:
-		$BasicPush_v2.bumper_shoot($BasicPush_v2.get_transform().get_origin().x)
+		$BasicPush_v2.bumper_shoot($BasicPush_v2.get_transform().get_origin())
 	pass
