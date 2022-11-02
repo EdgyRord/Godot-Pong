@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BasicPush_Wave.png-b9bf2d2dcb421e74f045aec031a5c2e9.stex"
+path="res://.import/Player_sprite.png-627d87ed6fa7c97907b0f95b18761624.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Abilities/BasicPush_Wave.png"
-dest_files=[ "res://.import/BasicPush_Wave.png-b9bf2d2dcb421e74f045aec031a5c2e9.stex" ]
+source_file="res://Assets/Graphics/Player_sprite.png"
+dest_files=[ "res://.import/Player_sprite.png-627d87ed6fa7c97907b0f95b18761624.stex" ]
 
 [params]
 

@@ -5,6 +5,11 @@ var speed : int = 250
 var vel : Vector2 = Vector2()
 
 # Called when the node enters the scene tree for the first time.
+func _input(event):
+	if Input.is_action_just_pressed("p2_push_action"):
+		$BasicPushv3.activate()
+
+
 func _physics_process(delta):
 	vel.y = 0
 	

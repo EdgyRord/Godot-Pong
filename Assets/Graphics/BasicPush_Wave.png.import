@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bumper_sprite.png-42497d09f1b6653da0bb35299d3f9dcb.stex"
+path="res://.import/BasicPush_Wave.png-785ce9e44bb748b508000ac48292983f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Abilities/Bumper_sprite.png"
-dest_files=[ "res://.import/Bumper_sprite.png-42497d09f1b6653da0bb35299d3f9dcb.stex" ]
+source_file="res://Assets/Graphics/BasicPush_Wave.png"
+dest_files=[ "res://.import/BasicPush_Wave.png-785ce9e44bb748b508000ac48292983f.stex" ]
 
 [params]
 

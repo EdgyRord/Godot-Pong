@@ -17,19 +17,20 @@ var bumper_return_speed = -100
 var bounce_times : int = 0
 
 func _ready(): 	
-	print_debug(get_parent().player_number)
+#	print_debug(get_parent().player_number)
 	
 	pass # Replace with function body.
-	
 	
 func _physics_process(delta):
 	if is_shooting:
 		if current < destination:
 			var collision_info = move_and_collide(Vector2(bumper_speed,0)*delta)
 			if collision_info:
-				handle_collision(collision_info.collider)
-				bounce_times+= 1
-				print_debug(bounce_times)
+#				handle_collision(collision_info.collider)
+#				$CollisionShape2D.disabled = true
+#				bounce_times+= 1
+#				print_debug(bounce_times)
+				print_debug(collision_info.collider_shape)
 			current = get_transform().get_origin().x
 			#print_debug("shooting..." + str(current) + " " + str(destination))
 		else:
@@ -50,12 +51,15 @@ func _physics_process(delta):
 			position.y = origin_y
 			#remove_collision_exception_with(collider)
 			is_ready = true
+			$CollisionShape2D.disabled = false
 
 
 func handle_collision(collider):
-	collider.speed = 2000 + collider.min_speed
-	if(collider.vel_before_bounce.x * collider.vel.x >= 0):
-		collider.vel.x = -collider.vel.x
+	collider.speed = 100
+	$CollisionShape2D.disabled = true
+#	collider.vel.bounce()
+#	if(collider.vel_before_bounce.x * collider.vel.x >= 0):
+#		collider.vel.x = -collider.vel.x
 	#add_collision_exception_with(collider)
 
 #Shoot the bumper forward

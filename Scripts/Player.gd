@@ -8,6 +8,11 @@ const push_ability = preload("res://Assets/Abilities/BasicPush.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
+func _input(event):
+	if Input.is_action_just_pressed("p1_push_action"):
+		use_main_ability(position + Vector2(30,0))
+
+
 func _physics_process(delta):
 	vel.y = 0
 	
@@ -16,8 +21,7 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("p1_down_move"):
 		vel.y += speed
 	
-	if Input.is_action_just_pressed("p1_push_action"):
-		use_main_ability(position + Vector2(30,0))
+
 	
 	move_and_collide(vel*delta)
 	
